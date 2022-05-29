@@ -30,14 +30,14 @@ public class StreetLampController : MonoBehaviour
 
     IEnumerator Flicker()
     {
-        float intensity = _lightController.light.intensity;
-        _lightController.light.enabled = false;
+        float intensity = _lightController.controlledLight.intensity;
+        _lightController.controlledLight.enabled = false;
         yield return new WaitForSeconds(Random.Range(0.02f, 0.05f));
-        _lightController.light.enabled = true;
+        _lightController.controlledLight.enabled = true;
         yield return new WaitForSeconds(Random.Range(0.02f, 0.05f));
-        _lightController.light.enabled = false;
+        _lightController.controlledLight.enabled = false;
         yield return new WaitForSeconds(Random.Range(0.02f, 0.05f));
-        _lightController.light.enabled = true;
+        _lightController.controlledLight.enabled = true;
     }
 
     public void Update()

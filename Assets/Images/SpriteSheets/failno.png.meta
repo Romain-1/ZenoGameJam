@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e74f19216a004c74ba6fc3f444db87af
+guid: 6fb294815de25cb43af79f38365dc588
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lampadaire_0
+      name: failno_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 405
-        width: 309
-        height: 601
+        x: 197
+        y: 613
+        width: 633
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d9c85910b6f204fa1c09fa8cf2dd7f
-      internalID: -377316842
+      spriteID: 7d1704fbc201d3146b72a8f05209f368
+      internalID: 1811240812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lampadaire_1
+      name: failno_1
       rect:
         serializedVersion: 2
-        x: 651
-        y: 418
-        width: 272
-        height: 359
+        x: 265
+        y: 386
+        width: 420
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a76dd8dc8ccd3347b1e50bbd3f5f5a0
-      internalID: 1371335579
+      spriteID: c406bec4c7b3d534592e419c6ee0d8ea
+      internalID: -781084073
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lampadaire_0: -377316842
-      lampadaire_1: 1371335579
+      failno_1: -781084073
+      failno_0: 1811240812
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e74f19216a004c74ba6fc3f444db87af
+guid: 766b62085b2977440830d97bc2d965d2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lampadaire_0
+      name: forg_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 405
-        width: 309
-        height: 601
+        x: 33
+        y: 349
+        width: 161
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d9c85910b6f204fa1c09fa8cf2dd7f
-      internalID: -377316842
+      spriteID: 1cbf7a8519ef9664fb549f65754b031f
+      internalID: -756188256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lampadaire_1
+      name: forg_1
       rect:
         serializedVersion: 2
-        x: 651
-        y: 418
-        width: 272
-        height: 359
+        x: 270
+        y: 347
+        width: 161
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a76dd8dc8ccd3347b1e50bbd3f5f5a0
-      internalID: 1371335579
+      spriteID: 54034bf545a87474ab99463f5bc8b3ce
+      internalID: -2020538790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forg_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 59
+        width: 20
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc50be6215624b43a256fecd8216d8f
+      internalID: 507072178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forg_3
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 34
+        width: 63
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12359453c38a1e44a1c2b2a9ecd6503
+      internalID: 202246327
       vertices: []
       indices: 
       edges: []
@@ -156,8 +198,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lampadaire_0: -377316842
-      lampadaire_1: 1371335579
+      forg_3: 202246327
+      forg_1: -2020538790
+      forg_0: -756188256
+      forg_2: 507072178
+      forg_4: -1460893437
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

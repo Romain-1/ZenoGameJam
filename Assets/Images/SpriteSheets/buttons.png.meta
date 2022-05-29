@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e74f19216a004c74ba6fc3f444db87af
+guid: b273904a54572b94787ee3097db88e83
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lampadaire_0
+      name: buttons_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 405
-        width: 309
-        height: 601
+        x: 205
+        y: 168
+        width: 131
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d9c85910b6f204fa1c09fa8cf2dd7f
-      internalID: -377316842
+      spriteID: 536a5830e84614f45b5c3b88664ff9c0
+      internalID: -1758510936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lampadaire_1
+      name: buttons_1
       rect:
         serializedVersion: 2
-        x: 651
-        y: 418
-        width: 272
-        height: 359
+        x: 469
+        y: 163
+        width: 115
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a76dd8dc8ccd3347b1e50bbd3f5f5a0
-      internalID: 1371335579
+      spriteID: 9ad97e71eb0d77c45bde4cc91eb78251
+      internalID: -1198751693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 170
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0330da2fa4444445b86d2574940ed4e
+      internalID: 831543173
       vertices: []
       indices: 
       edges: []
@@ -156,8 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lampadaire_0: -377316842
-      lampadaire_1: 1371335579
+      buttons_2: 831543173
+      buttons_0: -1758510936
+      buttons_1: -1198751693
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

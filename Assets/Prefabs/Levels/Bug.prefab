@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  rotationSpeed: 0.1
+  rotationSpeed: 0.3
   minDistance: 1
 --- !u!58 &5667224715351625125
 CircleCollider2D:

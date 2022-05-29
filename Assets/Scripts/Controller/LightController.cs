@@ -11,7 +11,7 @@ public class LightController : MonoBehaviour
     public float rangeIntensity = 1f;
     public float rangeZValue = 0.3f;
 
-    public Light light;
+    public Light controlledLight;
     private CircleCollider2D _collider;
     private List<Action> _actions = new List<Action>();
 
@@ -21,10 +21,10 @@ public class LightController : MonoBehaviour
 
     void Awake()
     {
-        light = GetComponent<Light>();
+        controlledLight = GetComponent<Light>();
         _collider = GetComponent<CircleCollider2D>();
-        _baseIntensity = light.intensity;
-        _baseZValue = light.transform.position.z;
+        _baseIntensity = controlledLight.intensity;
+        _baseZValue = controlledLight.transform.position.z;
         _timer = Random.Range(0, 100);
     }
 
@@ -35,7 +35,7 @@ public class LightController : MonoBehaviour
 
     public void Toggle(bool state)
     {
-        light.enabled = state;
+        controlledLight.enabled = state;
         _collider.enabled = state;
 
         if (state == false)
@@ -52,9 +52,9 @@ public class LightController : MonoBehaviour
     {
         _timer += Time.deltaTime;
 
-        light.intensity = Mathf.Sin(_timer) * rangeIntensity + _baseIntensity;
-        Vector3 pos = light.transform.position;
+        controlledLight.intensity = Mathf.Sin(_timer) * rangeIntensity + _baseIntensity;
+        Vector3 pos = controlledLight.transform.position;
         pos.z = -Mathf.Sin(_timer) * rangeZValue + _baseZValue;
-        light.transform.position = pos;
+        controlledLight.transform.position = pos;
     }
 }

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class HouseController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public LevelScene _scene;
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.TryGetComponent<MothController>(out MothController moth))
+        {
+            _scene.MothSaved();
+            GameObject.Destroy(moth.gameObject);
+        }
     }
 }

@@ -11,6 +11,8 @@ public class BugSpawner : MonoBehaviour
     public float range = 5;
     public GameObject bugPrefab;
 
+    public LevelScene level;
+
     private Vector3 GetRandomPosition()
     {
         float r = range * Mathf.Sqrt(Random.Range(0f, 1f));
@@ -31,6 +33,7 @@ public class BugSpawner : MonoBehaviour
 
     void Start()
     {
+        level.AddMoth(count);
         StartCoroutine(SpawnMothsCoroutine());
     }
 

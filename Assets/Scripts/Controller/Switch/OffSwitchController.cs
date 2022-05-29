@@ -7,13 +7,6 @@ using UnityEngine.Serialization;
 public class OffSwitchController : MonoBehaviour
 {
     [SerializeField] private SwitchController _parent;
-    public SpriteRenderer _renderer;
-
-
-    private void Start()
-    {
-        _renderer = GetComponent<SpriteRenderer>();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

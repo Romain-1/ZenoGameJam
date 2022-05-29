@@ -7,7 +7,7 @@ public class InsectController : MonoBehaviour
     public float speed = 3f;
     public float rotationSpeed = 0.1f;
 
-    private float _angleTowards = 0;
+    protected float _angleTowards = 0;
     private Animator _animator;
 
     void Awake()

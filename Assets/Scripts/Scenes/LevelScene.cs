@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelScene : MonoBehaviour
 {
+    public int sceneId = 0;
+
     private int _mothCount = 0;
     private int _deadMoths = 0;
     private int _savedMoths = 0;
@@ -21,5 +23,13 @@ public class LevelScene : MonoBehaviour
     public void MothSaved()
     {
         _savedMoths += 1;
+    }
+
+    public void Update()
+    {
+        if (_mothCount <= 0)
+        {
+
+        }
     }
 }

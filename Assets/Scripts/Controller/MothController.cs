@@ -8,6 +8,8 @@ public class MothController : InsectController
     public float minDistance = 0.1f;
 
     private List<LightController> _followings = new List<LightController>();
+    private float _goingBackTimer = 0f;
+    private Vector2 _goingBackTarget;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,9 +40,24 @@ public class MothController : InsectController
     {
         float distance = Vector2.Distance(_followings[0].transform.position, transform.position);
 
-        if (distance > minDistance)
+        if (_goingBackTimer > 0f)
+        {
+            MoveTowardsTarget(_goingBackTarget);
+            _goingBackTimer -= Time.deltaTime;
+        }
+        else if (distance > minDistance)
         {
             MoveTowardsTarget(_followings[0].transform.position);
+        }
+        else
+        {
+            _goingBackTimer = UnityEngine.Random.Range(0.02f, 0.1f);
+            float radius = UnityEngine.Random.Range(5f, 10f);
+            float angle = _angleTowards - 180 + UnityEngine.Random.Range(-90f, 90f);
+            _goingBackTarget = new Vector2(
+                radius * Mathf.Sin(Mathf.PI * 2 * angle / 360f) + _followings[0].transform.position.x,
+                radius * Mathf.Cos(Mathf.PI * 2 * angle / 360f) + _followings[0].transform.position.y
+            );
         }
     }
 }
