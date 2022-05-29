@@ -32,11 +32,11 @@ public class StreetLampController : MonoBehaviour
     {
         float intensity = _lightController.controlledLight.intensity;
         _lightController.controlledLight.enabled = false;
-        yield return new WaitForSeconds(Random.Range(0.02f, 0.05f));
+        yield return new WaitForSeconds(0.05f);
         _lightController.controlledLight.enabled = true;
-        yield return new WaitForSeconds(Random.Range(0.02f, 0.05f));
+        yield return new WaitForSeconds(0.05f);
         _lightController.controlledLight.enabled = false;
-        yield return new WaitForSeconds(Random.Range(0.02f, 0.05f));
+        yield return new WaitForSeconds(0.05f);
         _lightController.controlledLight.enabled = true;
     }
 

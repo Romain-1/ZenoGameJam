@@ -9,6 +9,9 @@ public class SwitchController : MonoBehaviour
 
     public Sprite spriteOn;
     public Sprite spriteOff;
+    public LineRenderer line;
+    public Color lineOnColor;
+    public Color lineOffColor;
 
     private SpriteRenderer _renderer;
 
@@ -19,6 +22,8 @@ public class SwitchController : MonoBehaviour
         _renderer.sprite = isOn ? spriteOn : spriteOff;
         lamp.Toggle(isOn);
         _stillOnSwitch = true;
+        line.startColor = isOn ? lineOnColor : lineOffColor;
+        line.endColor = line.startColor;
     }
 
     private void Start()

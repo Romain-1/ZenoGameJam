@@ -26,7 +26,8 @@ public class BugSpawner : MonoBehaviour
     {
         for (int i = 0; i < count; ++i)
         {
-            Instantiate(bugPrefab, GetRandomPosition(), Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
+            GameObject obj = Instantiate(bugPrefab, GetRandomPosition(), Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
+            obj.GetComponent<InsectController>().level = level;
             yield return new WaitForSeconds(Random.Range(0.01f, 0.05f));
         }
     }

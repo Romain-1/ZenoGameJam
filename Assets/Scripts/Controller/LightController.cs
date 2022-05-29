@@ -10,6 +10,7 @@ public class LightController : MonoBehaviour
     public int priority = 0;
     public float rangeIntensity = 1f;
     public float rangeZValue = 0.3f;
+    public bool shouldWave = true;
 
     public Light controlledLight;
     private CircleCollider2D _collider;
@@ -50,6 +51,8 @@ public class LightController : MonoBehaviour
 
     private void Update()
     {
+        if (!shouldWave)
+            return;
         _timer += Time.deltaTime;
 
         controlledLight.intensity = Mathf.Sin(_timer) * rangeIntensity + _baseIntensity;

@@ -39,6 +39,13 @@ public class PlayerController : InsectController
 	public void Start()
 	{
 		_lastMousePos = transform.position;
+		_lightController.Toggle(state == State.On);
+	}
+
+	public override void Die()
+	{
+		level.PlayerDeath();
+		base.Die();
 	}
 
 	public void Update()

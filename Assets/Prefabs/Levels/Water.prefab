@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8606207992260879842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8606207992260879772}
+  - component: {fileID: 8606207992260879843}
+  - component: {fileID: 5932547108913843602}
+  m_Layer: 0
+  m_Name: Water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8606207992260879772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606207992260879842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.17418827, y: -1.5545123, z: 7.8155255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &8606207992260879843
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606207992260879842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.0667806, y: 0.46272582}
+      - {x: 4.6734676, y: 0.90716004}
+      - {x: 4.946377, y: 1.5849609}
+      - {x: 4.8484793, y: 2.7213547}
+      - {x: 3.8441434, y: 3.9512072}
+      - {x: 1.9662768, y: 4.685854}
+      - {x: -0.27674836, y: 4.5481367}
+      - {x: -2.0968869, y: 3.421112}
+      - {x: -2.5473304, y: 2.5488937}
+      - {x: -2.5343876, y: 1.425272}
+      - {x: -2.215429, y: 0.31171143}
+      - {x: -1.7899082, y: -0.4868166}
+      - {x: -0.83891773, y: -1.2586446}
+      - {x: 0.33710265, y: -1.5618328}
+      - {x: 1.1875811, y: -1.3945544}
+      - {x: 1.6847452, y: -1.0886343}
+      - {x: 2.8438501, y: 0.13694495}
+--- !u!114 &5932547108913843602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606207992260879842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19d9eb1c7881b24dbf39bf8aa4a2c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

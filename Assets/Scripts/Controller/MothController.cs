@@ -8,6 +8,7 @@ public class MothController : InsectController
     public float minDistance = 0.1f;
 
     private List<LightController> _followings = new List<LightController>();
+    // private LightController _following = null;
     private float _goingBackTimer = 0f;
     private Vector2 _goingBackTarget;
 
@@ -15,6 +16,8 @@ public class MothController : InsectController
     {
         if (other.gameObject.TryGetComponent<LightController>(out LightController l))
         {
+            // if (_following == null || l.priority > _following.priority)
+            //     _following = l;
             l.OnSwitchOff(() =>
             {
                 _followings.Remove(l);
@@ -24,9 +27,25 @@ public class MothController : InsectController
         }
     }
 
+    public override void Die()
+    {
+        level.MothDied();
+        base.Die();
+    }
+
+    // public void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.gameObject.TryGetComponent<LightController>(out LightController l))
+    //     {
+    //         if (l == _following)
+    //     }
+    // }
+
     // Update is called once per frame
     private void Update()
     {
+        if (LevelScene.gameStopped) return;
+
         SetIsMoving(_followings.Count > 0);
         if (_followings.Count > 0)
         {
@@ -34,7 +53,6 @@ public class MothController : InsectController
             UpdateFollow();
         }
     }
-
 
     private void UpdateFollow()
     {
