@@ -8,10 +8,13 @@ public class LevelScene : MonoBehaviour
     public int levelId = 0;
     public PlayerController _player;
 
+    public AudioClip onSuccessSound;
+    public AudioClip onFailSound;
+
     private int _mothCount = 0;
     private int _deadMoths = 0;
     private int _savedMoths = 0;
-    
+
     static public bool gameStopped = false;
 
     public void AddMoth(int count = 1)
@@ -49,7 +52,18 @@ public class LevelScene : MonoBehaviour
     public void GameOver(float p)
     {
         gameStopped = true;
-        if (p >= 50f) PlayerResults.levels[levelId] = 1;
+        AudioSource source = Camera.main.gameObject.GetComponent<AudioSource>();
+        if (p >= 50f)
+        {
+            PlayerResults.levels[levelId] = 1;
+            source.clip = onSuccessSound;
+        }
+        else
+        {
+            source.clip = onFailSound;
+        }
+        source.loop = false;
+        source.Play();
         if (p >= 75f) PlayerResults.levels[levelId] = 2;
         if (p > 99f) PlayerResults.levels[levelId] = 3;
         SceneManager.LoadScene("Scenes/GameoverScene", LoadSceneMode.Additive);

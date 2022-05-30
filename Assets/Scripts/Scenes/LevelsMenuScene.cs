@@ -11,6 +11,7 @@ public class LevelsMenuScene : MonoBehaviour
     [Serializable]
     public struct Level
     {
+        public GameObject level;
         public Image star1;
         public Image star2;
         public Image star3;
@@ -29,9 +30,13 @@ public class LevelsMenuScene : MonoBehaviour
     {
         for (int i = 0; i < levels.Length; ++i)
         {
-            levels[i].star1.sprite = (PlayerResults.levels[i + 1] >= 1) ? fullStars[Random.Range(0, fullStars.Length)] : emptyStars[Random.Range(0, emptyStars.Length)];
-            levels[i].star2.sprite = (PlayerResults.levels[i + 1] >= 2) ? fullStars[Random.Range(0, fullStars.Length)] : emptyStars[Random.Range(0, emptyStars.Length)];
-            levels[i].star3.sprite = (PlayerResults.levels[i + 1] >= 3) ? fullStars[Random.Range(0, fullStars.Length)] : emptyStars[Random.Range(0, emptyStars.Length)];
+            levels[i].level.SetActive(i + 1 < PlayerResults.levels.Length);
+            if (i + 1 < PlayerResults.levels.Length)
+            {
+                levels[i].star1.sprite = (PlayerResults.levels[i + 1] >= 1) ? fullStars[Random.Range(0, fullStars.Length)] : emptyStars[Random.Range(0, emptyStars.Length)];
+                levels[i].star2.sprite = (PlayerResults.levels[i + 1] >= 2) ? fullStars[Random.Range(0, fullStars.Length)] : emptyStars[Random.Range(0, emptyStars.Length)];
+                levels[i].star3.sprite = (PlayerResults.levels[i + 1] >= 3) ? fullStars[Random.Range(0, fullStars.Length)] : emptyStars[Random.Range(0, emptyStars.Length)];
+            }
         }
     }
 }

@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelId: 0
+  _player: {fileID: 0}
+  onSuccessSound: {fileID: 8300000, guid: c80fa8149ee6c1b4ca1d6071a0125e69, type: 3}
+  onFailSound: {fileID: 8300000, guid: e9ad25fbb744a1e4a8816d4ccce2575c, type: 3}
 --- !u!1 &4633503868498033091
 GameObject:
   m_ObjectHideFlags: 0
