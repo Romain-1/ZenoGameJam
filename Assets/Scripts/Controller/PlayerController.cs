@@ -48,8 +48,9 @@ public class PlayerController : InsectController
 		base.Die();
 	}
 
-	public void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdateRotation();
 		if (Input.GetKeyDown(KeyCode.Space))
 		{

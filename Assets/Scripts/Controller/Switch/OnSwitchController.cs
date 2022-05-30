@@ -15,9 +15,4 @@ public class OnSwitchController : MonoBehaviour
             _parent.OnPressed();
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        _parent.OutOfButton();
-    }
 }

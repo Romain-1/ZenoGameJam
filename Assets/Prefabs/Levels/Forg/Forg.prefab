@@ -70,7 +70,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animOffsetSeconds: 1
   thong: {fileID: 7833666400768234084}
-  level: {fileID: 0}
 --- !u!1001 &997458398113322552
 PrefabInstance:
   m_ObjectHideFlags: 0

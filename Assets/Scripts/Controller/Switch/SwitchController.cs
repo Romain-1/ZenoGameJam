@@ -15,13 +15,10 @@ public class SwitchController : MonoBehaviour
 
     private SpriteRenderer _renderer;
 
-    private bool _stillOnSwitch = false;
-
     private void HandleSwitch(bool isOn)
     {
         _renderer.sprite = isOn ? spriteOn : spriteOff;
         lamp.Toggle(isOn);
-        _stillOnSwitch = true;
         line.startColor = isOn ? lineOnColor : lineOffColor;
         line.endColor = line.startColor;
     }
@@ -30,12 +27,6 @@ public class SwitchController : MonoBehaviour
     {
         _renderer = GetComponent<SpriteRenderer>();
         HandleSwitch(lamp.isOn);
-        _stillOnSwitch = false;
-    }
-
-    public void OutOfButton()
-    {
-        _stillOnSwitch = false;
     }
 
     public void OnPressed()

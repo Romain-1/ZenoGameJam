@@ -38,9 +38,12 @@ public class BugSpawner : MonoBehaviour
         StartCoroutine(SpawnMothsCoroutine());
     }
 
+
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Handles.color = Color.red;
         Handles.DrawWireDisc(transform.position, transform.forward, range, 1);
     }
+#endif
 }

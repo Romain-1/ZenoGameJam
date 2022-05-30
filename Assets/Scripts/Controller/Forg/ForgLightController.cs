@@ -8,6 +8,8 @@ public class ForgLightController : MonoBehaviour
     private Animator _animator;
     public ThongController thong;
 
+    private List<Light> _lights = new List<Light>();
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -15,7 +17,24 @@ public class ForgLightController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        _animator.Play("Update");
+        if (other.TryGetComponent(out Light l))
+        {
+            _lights.Add(l);
+            _animator.Play("Update");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out Light l))
+        {
+            _lights.Remove(l);
+        }
+    }
+
+    private void Update()
+    {
+        _animator.SetBool("IsTrigger", _lights.Count > 0);
     }
 
     void Eat()

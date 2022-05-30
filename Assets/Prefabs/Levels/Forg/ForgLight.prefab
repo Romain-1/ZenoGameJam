@@ -232,6 +232,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 697979335386518105, guid: 963920a0dffc1f14a8d689dc42a8e4ea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 697979335386518105, guid: 963920a0dffc1f14a8d689dc42a8e4ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -274,6 +278,10 @@ PrefabInstance:
     - target: {fileID: 850055247103361715, guid: 963920a0dffc1f14a8d689dc42a8e4ea, type: 3}
       propertyPath: m_Name
       value: Thong
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954352458206165379, guid: 963920a0dffc1f14a8d689dc42a8e4ea, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963920a0dffc1f14a8d689dc42a8e4ea, type: 3}

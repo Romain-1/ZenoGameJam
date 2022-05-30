@@ -26,10 +26,12 @@ public class WaterController : MonoBehaviour
     {
         foreach(var insect in _insects)
         {
-            if (!insect.IsMoving)
+            if (!insect.IsMoving && insect.staticSince > 1f)
             {
                 insect.Drown();
             }
         }
+
+        _insects.RemoveAll(insect => (!insect.IsMoving && insect.staticSince > 1f));
     }
 }

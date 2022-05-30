@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,5 +16,13 @@ public class SplashScreenScene : MonoBehaviour
     public void OnTransitionEnded()
     {
         SceneManager.LoadScene("Scenes/LevelsMenu", LoadSceneMode.Single);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

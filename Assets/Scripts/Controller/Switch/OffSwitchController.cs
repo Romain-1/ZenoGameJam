@@ -15,9 +15,4 @@ public class OffSwitchController : MonoBehaviour
             _parent.OffPressed();
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        _parent.OutOfButton();
-    }
 }

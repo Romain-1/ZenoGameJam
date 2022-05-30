@@ -33,19 +33,12 @@ public class MothController : InsectController
         base.Die();
     }
 
-    // public void OnTriggerExit2D(Collider2D other)
-    // {
-    //     if (other.gameObject.TryGetComponent<LightController>(out LightController l))
-    //     {
-    //         if (l == _following)
-    //     }
-    // }
-
     // Update is called once per frame
-    private void Update()
+    public override void Update()
     {
         if (LevelScene.gameStopped) return;
 
+        base.Update();
         SetIsMoving(_followings.Count > 0);
         if (_followings.Count > 0)
         {

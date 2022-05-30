@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class InsectController : MonoBehaviour
     public float speed = 3f;
     public float rotationSpeed = 0.1f;
     public bool IsMoving {private set; get;}
+    public float staticSince = 0f;
     public LevelScene level;
 
     protected float _angleTowards = 0;
@@ -31,7 +33,7 @@ public class InsectController : MonoBehaviour
 
     public virtual void Die()
     {
-        print("Le game object est destroy la");
+        Debug.Log("an insect died");
         GameObject.Destroy(gameObject);
     }
 
@@ -39,6 +41,7 @@ public class InsectController : MonoBehaviour
     {
         IsMoving = state;
         _animator.SetBool("IsMoving", state);
+        if (state == true) staticSince = 0f;
     }
 
     protected void UpdateRotation()
@@ -55,5 +58,10 @@ public class InsectController : MonoBehaviour
         float angleRad = Mathf.Atan2(target.y - transform.position.y, target.x - transform.position.x);
         _angleTowards = (180 / Mathf.PI) * angleRad;
         transform.position += speed * Time.deltaTime * transform.up;
+    }
+
+    public virtual void Update()
+    {
+        if (!IsMoving) staticSince += Time.deltaTime;
     }
 }

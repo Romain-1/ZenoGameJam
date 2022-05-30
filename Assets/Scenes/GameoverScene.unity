@@ -848,6 +848,7 @@ MonoBehaviour:
   star1: {fileID: 885978504}
   star2: {fileID: 1077216766}
   star3: {fileID: 1022707609}
+  nextButton: {fileID: 355880116}
   title: {fileID: 537450251}
   fullStar: {fileID: 21300000, guid: 7d78d97c98ed4ff419e6158020c5952e, type: 3}
   emptyStar: {fileID: 21300000, guid: 97bf6930ca26b4246b6742099ba98d89, type: 3}

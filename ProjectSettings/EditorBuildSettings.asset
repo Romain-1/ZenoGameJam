@@ -28,7 +28,7 @@ EditorBuildSettings:
     guid: 0c9427b8abdcfb54b81a9872220830b4
   - enabled: 1
     path: Assets/Scenes/Levels/Level6.unity
-    guid: 46294fc14c46a6f48b459d0c76530dd7
+    guid: 36c02149fd1cf7f4f9ec54c5482155e4
   - enabled: 1
     path: Assets/Scenes/GameoverScene.unity
     guid: 653ebfb0224074246974cc2e98173f51

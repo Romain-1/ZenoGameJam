@@ -24,11 +24,13 @@ public class LevelScene : MonoBehaviour
 
     public void MothDied()
     {
+        Debug.Log("A moth died :'( sad");
         _deadMoths += 1;
     }
 
     public void MothSaved()
     {
+        Debug.Log("A moth has been saved :) yay");
         _savedMoths += 1;
     }
 
@@ -53,7 +55,7 @@ public class LevelScene : MonoBehaviour
     {
         gameStopped = true;
         AudioSource source = Camera.main.gameObject.GetComponent<AudioSource>();
-        if (p >= 50f)
+        if (p > 0f)
         {
             PlayerResults.levels[levelId] = 1;
             source.clip = onSuccessSound;
@@ -72,7 +74,7 @@ public class LevelScene : MonoBehaviour
 
     public void PlayerDeath()
     {
-        GameOver(0);
+        GameOver(0f);
     }
 
     public void Update()
