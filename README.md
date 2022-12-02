@@ -21,6 +21,10 @@ You are a little luciole that needs to guide moths to their house.
 
 _On 74 submissions and over 1 000 ratings_
 
+# Infos
+
+Programming made with unity by [@Romain-1](https://github.com/Romain-1) and art (2D assets, and music) made by [@matt-ias](https://github.com/matt-ias).
+
 # More details
 - [itch.io page](https://romain-1.itch.io/luciole)
 - [submission page](https://itch.io/jam/zeno-jam-the-perfect-jam-for-beginners-5/rate/1553047)
